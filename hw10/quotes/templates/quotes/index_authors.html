@@ -1,0 +1,18 @@
+{% extends "quotes/authors.html" %}
+
+{% block content %}
+
+<div class="author-details">
+    {% for author in authors %}
+    <h3 class="author-title">{{author.fullname}}</h3>
+    <p><strong>Born:</strong> <span class="author-born-date">{{author.date_born}}</span> 
+        <span class="author-born-location">in {{author.location_born}}</span></p>
+    <p><strong>Description:</strong></p>
+    <div class="author-description">
+        {{author.bio}}
+    </div>
+    
+</div>
+{% endfor %}
+</div>
+{% endblock %}
